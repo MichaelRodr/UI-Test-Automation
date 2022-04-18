@@ -1,0 +1,44 @@
+{
+    "name": "starter-wdio",
+    "version": "1.0.0",
+    "description": "UI Test automation framework based on WebdriverIO",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "clean": "rimraf .tsbuild && rimraf allure-results && rimraf junit-results",
+        "clean-report": "allure generate --clean ./allure-results",
+        "wdio": " npm run clean && wdio run test/wdio.conf.ts"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/MichaelRodr/UI-Test-Automation.git"
+    },
+    "keywords": [
+        "cucumber",
+        "gherkin",
+        "typescript"
+    ],
+    "author": "MichaelR",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/MichaelRodr/UI-Test-Automation/issues"
+    },
+    "homepage": "https://github.com/MichaelRodr/UI-Test-Automation#readme",
+    "devDependencies": {
+        "@types/jquery": "^3.5.14",
+        "@wdio/allure-reporter": "^7.19.5",
+        "@wdio/cli": "^7.19.5",
+        "@wdio/cucumber-framework": "^7.19.5",
+        "@wdio/junit-reporter": "^7.19.5",
+        "@wdio/local-runner": "^7.19.5",
+        "@wdio/spec-reporter": "^7.19.5",
+        "chromedriver": "^100.0.0",
+        "ts-node": "^10.7.0",
+        "typescript": "^4.6.3",
+        "wdio-chromedriver-service": "^7.3.2",
+        "wdio-wait-for": "^2.2.5"
+    },
+    "dependencies": {
+        "rimraf": "^3.0.2"
+    }
+}
